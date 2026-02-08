@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday My Love</title>
+
+    <!-- IMPORTANT for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 22px;
+            text-align: center;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            animation: fadeIn 1.2s ease;
+        }
+
+        h1 {
+            color: #ff3b6f;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: #ff5f8a;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+        }
+
+        p {
+            color: #444;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 14px 28px;
+            width: 100%;
+            border: none;
+            border-radius: 30px;
+            background: #ff3b6f;
+            color: white;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -10px;
+            color: #ff3b6f;
+            animation: float 4s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+        }
+
+        /* TABLET & DESKTOP */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 520px;
+                padding: 40px;
+            }
+
+            h1 {
+                font-size: 2.6rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+
+            button {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎂 Happy Birthday 🎉</h1>
+    <h2>Elizabeth Coloma 💖</h2>
+
+    <p>
+        Happy 24th Birthday, mahal ko ❤️<br><br>
+        Sa araw na ’to, gusto kong ipaalala sa’yo kung gaano ka kahalaga sa buhay ko.
+        Thank you sa lahat ng pagmamahal, pasensya, at saya na binibigay mo araw-araw.
+        Sana matupad lahat ng pangarap mo, at kahit anong mangyari,
+        nandito lang ako — ikaw at ikaw pa rin ang pipiliin ko.
+        <br><br>
+        Mahal na mahal kita, palagi.
+    </p>
+
+    <button onclick="showMessage()">Tap mo ‘to, Mahal 💝</button>
+</div>
+
+<script>
+    function showMessage() {
+        alert("I love you so much, Elizabeth 💖 Happy 24th Birthday! 🎂");
+    }
+
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (14 + Math.random() * 18) + "px";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 4000);
+    }
+
+    setInterval(createHeart, 350);
+</script>
+
+</body>
+</html>
