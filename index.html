@@ -1,123 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Happy Birthday My Love</title>
+<meta charset="UTF-8">
+<title>Happy Birthday My Love</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- IMPORTANT for mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * { box-sizing: border-box; }
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', sans-serif;
+        padding: 20px;
+        overflow-x: hidden;
+    }
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Segoe UI', sans-serif;
-            padding: 20px;
-            overflow-x: hidden;
-        }
+    .container {
+        background: white;
+        padding: 25px;
+        border-radius: 22px;
+        text-align: center;
+        width: 100%;
+        max-width: 420px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        animation: fadeIn 1.2s ease;
+    }
 
-        .container {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 22px;
-            text-align: center;
-            width: 100%;
-            max-width: 420px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-            animation: fadeIn 1.2s ease;
-        }
+    h1 {
+        color: #ff3b6f;
+        font-size: 2.1rem;
+    }
 
-        h1 {
-            color: #ff3b6f;
-            font-size: 2.2rem;
-            margin-bottom: 5px;
-        }
+    h2 {
+        color: #ff5f8a;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
 
-        h2 {
-            color: #ff5f8a;
-            font-size: 1.4rem;
-            margin-bottom: 18px;
-        }
+    p {
+        color: #444;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 
-        p {
-            color: #444;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
+    button {
+        margin-top: 20px;
+        padding: 14px;
+        width: 100%;
+        border: none;
+        border-radius: 30px;
+        background: #ff3b6f;
+        color: white;
+        font-size: 1.05rem;
+        cursor: pointer;
+    }
 
-        button {
-            margin-top: 25px;
-            padding: 14px 28px;
-            width: 100%;
-            border: none;
-            border-radius: 30px;
-            background: #ff3b6f;
-            color: white;
-            font-size: 1.05rem;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    button:active {
+        transform: scale(0.97);
+    }
 
-        button:active {
-            transform: scale(0.97);
-        }
+    /* SLIDESHOW */
+    .slideshow {
+        display: none;
+        margin-top: 20px;
+        position: relative;
+    }
 
-        .heart {
-            position: fixed;
-            bottom: -10px;
-            color: #ff3b6f;
-            animation: float 4s linear infinite;
-            pointer-events: none;
-        }
+.slideshow img,
+.slideshow video {
+    width: 100%;
+    border-radius: 18px;
+    display: none;
+}
+.slideshow img.active,
+.slideshow video.active {
+    display: block;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
+    .slideshow img.active {
+        display: block;
+    }
 
-        @keyframes float {
-            from {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateY(-110vh);
-                opacity: 0;
-            }
-        }
+    /* HEARTS */
+    .heart {
+        position: fixed;
+        bottom: -10px;
+        color: #ff3b6f;
+        animation: float 4s linear infinite;
+        pointer-events: none;
+    }
 
-        /* TABLET & DESKTOP */
-        @media (min-width: 768px) {
-            .container {
-                max-width: 520px;
-                padding: 40px;
-            }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+    }
 
-            h1 {
-                font-size: 2.6rem;
-            }
-
-            h2 {
-                font-size: 1.6rem;
-            }
-
-            p {
-                font-size: 1.1rem;
-            }
-
-            button {
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+    @keyframes float {
+        from { transform: translateY(0); opacity: 1; }
+        to { transform: translateY(-110vh); opacity: 0; }
+    }
+</style>
 </head>
 <body>
 
@@ -127,35 +114,189 @@
 
     <p>
         Happy 24th Birthday, mahal ko ❤️<br><br>
-        Sa araw na ’to, gusto kong ipaalala sa’yo kung gaano ka kahalaga sa buhay ko.
-        Thank you sa lahat ng pagmamahal, pasensya, at saya na binibigay mo araw-araw.
-        Sana matupad lahat ng pangarap mo, at kahit anong mangyari,
-        nandito lang ako — ikaw at ikaw pa rin ang pipiliin ko.
-        <br><br>
+        Sa bawat larawan natin, nandoon ang alaala,
+        tawa, at pagmamahal na hindi ko ipagpapalit.
+        Ikaw ang pahinga at saya ko.
         Mahal na mahal kita, palagi.
     </p>
 
-    <button onclick="showMessage()">Tap mo ‘to, Mahal 💝</button>
+<button id="surpriseBtn">Tap mo ‘to, Mahal 💝</button>
+
+
+    <!-- SLIDESHOW -->
+    <div class="slideshow" id="slideshow">
+        <img src="img01.jpg" class="active">
+        <img src="img02.jpg">
+        <img src="img03.jpg">
+        <video src="vid4.mp4" muted playsinline></video>
+        <video src="vid5.mp4" muted playsinline></video>
+        <img src="img06.jpg">
+        <img src="img07.jpg">        
+        <img src="img08.jpg">
+                <img src="img09.jpg">
+                <img src="img010.jpg">
+        <img src="img012.jpg">
+        <img src="img013.jpg">
+        <img src="img014.jpg">
+        <img src="img015.jpg">
+        <img src="img016.jpg">
+        <img src="img017.jpg">        
+        <img src="img018.jpg">
+        <img src="img019.jpg">
+        <img src="img020.jpg">
+        <img src="img021.jpg">
+        <img src="img022.jpg">
+        <img src="img023.jpg">
+        <img src="img024.jpg">
+        <img src="img025.jpg">
+        <img src="img026.jpg">
+        <img src="img027.jpg">
+        <img src="img028.jpg">
+        <img src="img029.jpg">        
+        <img src="img030.jpg">
+        <img src="img031.jpg">
+        <img src="img032.jpg">
+        <img src="img033.jpg">
+        <video src="vid2.mp4" muted playsinline></video>
+    </div>
 </div>
 
+<!-- YOUTUBE MUSIC (HIDDEN) -->
+<iframe id="music"
+    width="0" height="0"
+    src=""
+    frameborder="0"
+    allow="autoplay">
+</iframe>
+
 <script>
-    function showMessage() {
-        alert("I love you so much, Elizabeth 💖 Happy 24th Birthday! 🎂");
+let slides = [];
+let currentSlide = 0;
+let slideInterval;
+
+function startSurprise() {
+
+    
+
+    document.getElementById("music").src =
+    "https://www.youtube.com/embed/BxPJRAbGOKQ?autoplay=1&loop=1&playlist=BxPJRAbGOKQ";
+
+    document.getElementById("slideshow").style.display = "block";
+
+    updateSlides();
+
+    currentSlide = 0;
+    showSlide(currentSlide);
+}
+
+// Re-scan slides (after removing videos)
+function updateSlides() {
+    slides = document.querySelectorAll(".slideshow img, .slideshow video");
+}
+// ========== TAP COUNTER BUTTON ==========
+const surpriseBtn = document.getElementById("surpriseBtn"); // siguraduhing may id sa button
+let tapCount = 0;
+const requiredTaps = 24;
+
+surpriseBtn.addEventListener("click", () => {
+    tapCount++;
+
+    if (tapCount < requiredTaps) {
+        // Optional: slight scale effect para cute
+        surpriseBtn.style.transform = "scale(1.1)";
+        setTimeout(() => { surpriseBtn.style.transform = "scale(1)"; }, 150);
+
+        // Optional: ipakita kung ilang tap na lang kailangan
+        surpriseBtn.innerText = `Tap mo pa ${requiredTaps - tapCount} beses 💖`;
+
+        return; // hindi pa magsisimula
     }
 
-    function createHeart() {
-        const heart = document.createElement("div");
-        heart.className = "heart";
-        heart.innerHTML = "❤️";
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.fontSize = (14 + Math.random() * 18) + "px";
-        document.body.appendChild(heart);
+    // Kapag umabot sa 5 taps
+    surpriseBtn.innerText = "💝 Surprise! 💝";
 
-        setTimeout(() => heart.remove(), 4000);
+    // Optional: hide button after first run
+    // surpriseBtn.style.display = "none";
+
+    // Start slideshow
+    startSurprise();
+});
+
+
+function showSlide(index) {
+
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+
+        if (slide.tagName === "VIDEO") {
+            slide.pause();
+            slide.currentTime = 0;
+        }
+    });
+
+    const active = slides[index];
+
+    // ============ IMAGE ============
+    if (active.tagName === "IMG") {
+
+        active.classList.add("active");
+
+        slideInterval = setTimeout(nextSlide, 3500);
     }
 
-    setInterval(createHeart, 350);
+    // ============ VIDEO ============
+    if (active.tagName === "VIDEO") {
+
+        active.style.display = "none";
+
+        active.load();
+
+        active.onloadeddata = () => {
+
+            active.classList.add("active");
+            active.style.display = "block";
+
+            active.play().catch(() => {});
+
+            // Play only 3s
+            slideInterval = setTimeout(() => {
+
+                active.pause();
+
+                // ❗ REMOVE VIDEO AFTER PLAY
+                active.remove();
+
+                // Update slides list
+                updateSlides();
+
+                // Adjust index
+                if (currentSlide >= slides.length) {
+                    currentSlide = 0;
+                }
+
+                showSlide(currentSlide);
+
+            }, 5000);
+        };
+    }
+}
+
+function nextSlide() {
+
+    clearTimeout(slideInterval);
+
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+}
 </script>
+
+
+
 
 </body>
 </html>
